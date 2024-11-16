@@ -7,6 +7,7 @@
   packages = [
     pkgs.pyright
     pkgs.ruff-lsp
+    pkgs.typescript-language-server
   ];
 
   # https://devenv.sh/languages/
@@ -15,6 +16,10 @@
     uv = {
       enable = true;
     };
+  };
+  languages.javascript = {
+    enable = true;
+    pnpm.enable = true;
   };
 
   # https://devenv.sh/processes/
